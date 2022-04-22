@@ -1,0 +1,77 @@
+unit uMain;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs,StompClient, Vcl.StdCtrls;
+
+type
+  TForm1 = class(TForm)
+    Label1: TLabel;
+    QueueEdit: TEdit;
+    SendMessageButton: TButton;
+    QueueMemo: TMemo;
+    Label2: TLabel;
+    queueeditrecv: TEdit;
+    SubscribeButton: TButton;
+    MessageMemo: TMemo;
+    procedure FormCreate(Sender: TObject);
+  private
+    StompClient_Pub: IStompClient;
+    StompClient_Sub: IStompClient;
+    procedure Send;
+    procedure Receive;
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form1: TForm1;
+
+implementation
+
+{$R *.dfm}
+
+
+Procedure TForm1.Send;
+begin
+  StompClient_Pub.connect;
+  try
+    try
+    StompClient_Pub.Send(QueueEdit.Text,QueueMemo.Text);
+    Except on E:Exception do
+    begin
+      raise Exception.Create('Error in send '+E.Message);
+    end;
+    end;
+  finally
+    StompClient_Pub.Disconnect;
+  end;
+end;
+
+
+Procedure TForm1.Receive;
+begin
+  if not StompClient_Sub.Connected then
+    raise Exception.Create('StompClient not connected');
+
+  if queueeditrecv.Text = '' then
+    raise Exception.Create('Specify queue name');
+
+//  if lAuto then
+//    lAckMode := amAuto
+//  else
+//    lAckMode := amClient;
+//  StompClient_Sub.
+end;
+
+procedure TForm1.FormCreate(Sender: TObject);
+begin
+  StompClient_Pub := StompUtils.StompClient;
+  StompClient_Sub := StompUtils.StompClient;
+  //StompClient.SetOnBeforeSendFrame(BeforeSendFrame);
+end;
+
+end.

@@ -1,0 +1,16 @@
+program SimpleMessaging;
+
+uses
+  Vcl.Forms,
+  uMain in 'uMain.pas' {fmmain},
+  StompClient in '..\..\StompClient.pas',
+  ThreadReceiver in 'ThreadReceiver.pas';
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(Tfmmain, fmmain);
+  Application.Run;
+end.

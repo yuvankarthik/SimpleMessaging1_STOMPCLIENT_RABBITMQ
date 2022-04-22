@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2022/04/22 11:07:01.000.707,=C:\Users\karthik.AGILELABS\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/04/22 11:09:23.000.855,C:\Users\karthik.AGILELABS\Documents\Embarcadero\Studio\Projects\Unit1.dfm=F:\Programs\RabbitMQ\delphistompclient-master\delphistompclient-master\examples\SimpleMessaging1\uMain.dfm</Transaction>
+    <Transaction>2022/04/22 11:09:23.000.855,C:\Users\karthik.AGILELABS\Documents\Embarcadero\Studio\Projects\Unit1.pas=F:\Programs\RabbitMQ\delphistompclient-master\delphistompclient-master\examples\SimpleMessaging1\uMain.pas</Transaction>
+    <Transaction>2022/04/22 11:09:31.000.302,C:\Users\karthik.AGILELABS\Documents\Embarcadero\Studio\Projects\Project1.dproj=F:\Programs\RabbitMQ\delphistompclient-master\delphistompclient-master\examples\SimpleMessaging1\SimpleMessaging.dproj</Transaction>
+    <Transaction>2022/04/22 11:12:03.000.041,=F:\Programs\RabbitMQ\delphistompclient-master\delphistompclient-master\StompClient.pas</Transaction>
+    <Transaction>2022/04/22 11:28:20.000.429,=F:\Programs\RabbitMQ\delphistompclient-master\delphistompclient-master\examples\SimpleMessaging1\ThreadReceiver.pas</Transaction>
+    <Transaction>2022/04/22 12:58:32.000.360,F:\Programs\RabbitMQ\delphistompclient-master\delphistompclient-master\StompClient.pas=</Transaction>
+    <Transaction>2022/04/22 12:58:37.000.404,=F:\Programs\RabbitMQ\delphistompclient-master\delphistompclient-master\examples\SimpleMessaging1\StompClient.pas</Transaction>
+  </Transactions>
+</BorlandProject>
